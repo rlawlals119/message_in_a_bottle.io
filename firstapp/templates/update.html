@@ -1,0 +1,37 @@
+
+
+
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유리병편지</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'read.css'%}">
+</head>
+<body>
+    {% load static %}
+    <div>
+    <h1>Message in a Bottle</h1>
+    </div>
+    
+    <img id="letter" src="{%static '편지지 white.png'%}" alt="편지지">
+    <div>
+    </div>
+    <p class="btnarrow">
+        <a href="{%url 'read'%}"><img onclick="changeLetter(0)" id="right-arrow" src="{%static 'right-arrow__1_-removebg-preview.png'%}" alt=""></a>
+        <a href="{%url 'read'%}"><img onclick="changeLetter(1)" id="left-arrow" src="{%static 'left-arrow-removebg-preview.png'%}" alt=""></a>
+    </p>
+    <form action="">
+        <p class="p_Lcontents">
+        <textarea class="Lcontents" name="Lcontents" id="" cols="5" rows="10" placeholder="편지가 왔어요" readonly>{{letters.body}}</textarea>
+        </p>
+        <br>
+    </form>
+    <a href="{%url 'home'%}">
+        <img class="xxx" src="{%static 'free-icon-x-symbol-75519.png'%}" alt="">
+    </a>
+</body>
+</html>

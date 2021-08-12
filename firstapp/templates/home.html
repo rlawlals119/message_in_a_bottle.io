@@ -1,0 +1,25 @@
+
+    <!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유리병편지</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+<body>
+    {% load static %}
+    <h1>Message in a Bottle</h1>
+    <a href="{%url 'write' %}">
+        <button id="button">Write</button>
+    </a>
+    <a href="{%url 'read' letters.id %}">
+        <img id="bottle" src="{%static 'bottle-removebg-preview.png'%}" alt="유리병이미지">
+    </a>
+</body>
+</html>
+
+</body>
+</html>
